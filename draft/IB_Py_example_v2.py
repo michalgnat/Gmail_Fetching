@@ -38,7 +38,7 @@ def get_payload(data):
 def main():
     global conn
     #subject = 'A Friend'
-    conn.login('michal.gnat@gmail.com', 'aqjejrhozjeimzzc')
+    conn.login('LOGIN_NAME@gmail.com', 'PASSWORD')
 
     conn.select('Inbox', readonly = False)
     while True:
