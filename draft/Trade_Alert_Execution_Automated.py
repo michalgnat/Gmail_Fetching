@@ -203,7 +203,7 @@ def main():
     action = [[0 for x in range(4)] for y in range(2)] #Array to be passed to trade execution function
     lines = [] #Payload from email
 
-    conn.login('michal.gnat@gmail.com', 'aqjejrhozjeimzzc')
+    conn.login()
     conn.select('Inbox', readonly = False)              
     
     while True:
