@@ -9,5 +9,10 @@ IB_Py_
 
 
 Libraries needed:
+1.IbPy2
+ 
 Interactive Brokers API library: https://github.com/blampe/IbPy
-git clone https://github.com/blampe/IbPy
+ 
+2.openssl and pyopenssl:
+ 
+You can use anaconda navigator to install these libraries into your workspace enviroment
