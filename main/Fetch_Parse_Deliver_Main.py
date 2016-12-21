@@ -327,11 +327,12 @@ def main():
     action = [[0 for x in range(4)] for y in range(2)] #Array to be passed to trade execution function
     lines = [] #Payload from email
 
-    conn.login('michal.gnat@gmail.com', 'aqjejrhozjeimzzc')
+    conn.login('GMAIL ACCOUNT NAME@gmail.com', 'INPUT YOUR PASSWORD HERE') #You will need to enable application access to gmail
     conn.select('Inbox', readonly = False)              
     
     while True:
         try:
+            #You will need to change the subject name depending on the emails you receive
             typ, data = conn.search(None,'(Subject "Trade Alert")') #gathers all the emails and presents them in numbers
             if typ == 'OK':
                 email_ids = data[-1].split()
