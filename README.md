@@ -1,12 +1,7 @@
 # Gmail_Fetching
-Script to retrieve emails from gmail
+Script to retrieve emails from gmail.
 
-The github contains scripts
-
-IB_Py_Execution: Inputs the trade into interactive brokers trading platform (TWS)
-IP_Py_Order_Execution: 
-IB_Py_
-
+See main directory for working scripts.
 
 Libraries needed:
 1.IbPy2
