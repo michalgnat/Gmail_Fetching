@@ -18,7 +18,6 @@ pattern_uid = re.compile('\d+ \(UID (?P<uid>\d+)\)')
 from ib.opt import Connection, message
 from ib.ext.Contract import Contract
 from ib.ext.Order import Order
-import test
 
 order_id = 1
 conn = imaplib.IMAP4_SSL('imap.gmail.com')
@@ -173,7 +172,6 @@ def find_ticker(lines, action):
     return action
 
 def stock_price(lines,action):
-    #print("HERE")
     lines = lines.split('\n')
     str = lines[0]
     words=str.split()
@@ -181,7 +179,6 @@ def stock_price(lines,action):
     word_counter = 0
     
     for word in words:#Should write an algorithm that takes into account the realtime data
-        #print(words[word_counter+1])
         if action[0][1] == "ALL":
             action[0][3] = "ALL"
             action[1][3] = "ALL"
@@ -327,7 +324,6 @@ def save_order_id(msg):
 
 def main():
     global conn
-    #subject = 'A Friend'
     action = [[0 for x in range(4)] for y in range(2)] #Array to be passed to trade execution function
     lines = [] #Payload from email
 
@@ -345,18 +341,15 @@ def main():
                 
                 #need to extract info to have "lines" variable
                 action = buy_or_sell(lines,action)
-                #print(action)
                 action = find_ticker(lines,action)
-                #print(action)
                 action = stock_price(lines,action)
-                #print(action)
                 action = stock_quant(lines,action)
                 
                 print"\n -----RESULT----- \n The calculated executions are: ", action
                 sleep(10)
 
-                #execfile('IB_Py_Execution.py')
-                #test.main()
+                #execfile('IB_Py_Execution.py') #Executes the orders on IB TWS trading platform
+
                 counter_deletion = 0
                 for list in action:
                     if list != 0 or list != '0':
