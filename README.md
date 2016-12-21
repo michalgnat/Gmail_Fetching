@@ -4,6 +4,7 @@ Script to retrieve emails from gmail.
 See main directory for working scripts.
 
 Libraries needed:
+ 
 1.IbPy2
  
 Interactive Brokers API library: https://github.com/blampe/IbPy
